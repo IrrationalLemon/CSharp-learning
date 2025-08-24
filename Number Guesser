@@ -1,0 +1,57 @@
+using System;
+
+namespace NumberMagic
+{
+    class Programm
+    {
+        static void Main(string[] args)
+        {
+            Random rnd = new Random();
+            int num_rnd = rnd.Next(1, 20);
+            int user_num;
+            int attempts = 0;
+            int maxAttempts = 10;
+            int score = 0;
+            bool result = false;
+
+            Console.WriteLine("Guess the number and become a super guesser!");
+            Console.WriteLine($"You have {maxAttempts} attempts to guess the number");
+            Console.WriteLine("Number range 1 to 20");
+
+            while(attempts <  maxAttempts)
+            {
+                attempts++;
+                Console.WriteLine($"Attempt number {attempts}. Write your number: ");
+                user_num = Convert.ToInt32(Console.ReadLine());
+
+                if (user_num != num_rnd && attempts == 10)
+                {
+                    Console.WriteLine(":(");
+                    break;
+                }
+
+                if (user_num == num_rnd) 
+                {
+                    Console.WriteLine("Wow you guessed! Congrats!");
+                    result = true;
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine(user_num < num_rnd ? "Try higher!" : "Try lower!");
+                }
+
+            }
+            if (!result) 
+            {
+                Console.WriteLine("You lose!");
+            }
+
+            if (result) 
+            {
+                Console.WriteLine("You get +100 winning score!");
+                score += 100;
+            }
+        }
+    }
+}
