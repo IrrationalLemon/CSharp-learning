@@ -1,0 +1,114 @@
+using System;
+using System.Reflection.Metadata;
+
+namespace EinUndZwantig
+{
+    internal class Programm
+    {
+        static void Main(string[] args)
+        {
+            Game game = new Game();
+            game.Start();
+        }
+
+        class Game
+        {
+            private Player User { get; set; }
+            private Player Bot { get; set; }
+            public void Start()
+            {
+                User = new Player();
+                Bot = new Player();
+
+                Console.WriteLine("Welcome to EinUndZwantig, there you can win or explosive!");
+                Console.WriteLine("Could you tell me your name?");
+
+                string name = Console.ReadLine();
+                User.Name = name;
+                User.SayHello();
+
+                Round();
+
+            }
+
+            public void Round()
+            {
+                int Round_num = 1;
+                
+                Console.WriteLine($"Round {Round_num} begins");
+                Console.WriteLine("Click 1 to find out your first card");
+                string Answer = Console.ReadLine();
+                if (Answer == "1")
+                {
+                    while (true)
+                    {
+
+                        Random rnd = new Random();
+                        int num_rnd = rnd.Next(1, 11);
+                        int bot_rnd = rnd.Next(1, 11);
+                        User.AddCard(num_rnd);
+                        Bot.AddCard(bot_rnd);
+
+                        if (User.IsBusted)
+                        {
+                            Console.WriteLine(
+                                """"
+                                Your score is busted. 
+                                You lose.
+                                """");
+                            Console.WriteLine($"Your score is {User.Score}, the last card played was {num_rnd}");
+                            break;
+                        }
+
+                        Console.WriteLine($"your next card is...{num_rnd}");
+                        Console.WriteLine("""
+                        Do you want find out your next card or stop? 
+                        1 - Yes 0 - Nope
+                        """);
+                        Answer = Console.ReadLine();
+                        if (Answer == "1" && User.IsBusted == false)
+                        {
+                            continue;
+                        }
+                        else if (Answer == "0")
+                        {
+                            Console.WriteLine($"Your score is {User.Score}");
+                            Console.WriteLine($"Bot's score is {Bot.Score}");
+                            break;
+                        }
+                        
+
+                    }
+                }
+                
+            }
+        }
+
+        class Player
+        {
+            public string Name = "Diller";
+            public int Score = 0;
+            public bool IsBusted = false;
+            
+            public void SayHello()
+            {
+                Console.WriteLine($"Great, {Name}, let's begin!");
+            }
+
+            public void AddCard(int cardValue)
+            {
+                Score += cardValue;
+                if (Score >= 22) 
+                {
+                    IsBusted = true;
+                }
+            }
+
+            public void ResetCards()
+            {
+                Score = 0;
+                IsBusted = false;
+            }
+        }
+    }
+}
