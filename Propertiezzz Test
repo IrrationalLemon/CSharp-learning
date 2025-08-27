@@ -1,0 +1,25 @@
+using System;
+
+namespace TestProperties
+{
+    public class Program
+    {
+        private static string playerName;
+        public static string Name {
+            get {
+                if (playerName == "") {
+                    return "Loh";
+                }
+                return playerName;
+            }
+            set { playerName = value; }
+        }
+
+        private static void Main(string[] args)
+        {
+            Console.WriteLine("Enter your name: ");
+            Name = Console.ReadLine();
+            Console.WriteLine($"Hello, {Name}");
+        }
+    }
+}
