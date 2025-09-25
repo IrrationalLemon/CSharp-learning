@@ -1,0 +1,15 @@
+C:\Users\Plna228\Desktop\my own projects\Randomizer\Randomizer\bin\Debug\Randomizer.exe.config
+C:\Users\Plna228\Desktop\my own projects\Randomizer\Randomizer\bin\Debug\Randomizer.exe
+C:\Users\Plna228\Desktop\my own projects\Randomizer\Randomizer\bin\Debug\Randomizer.pdb
+C:\Users\Plna228\Desktop\my own projects\Randomizer\Randomizer\obj\Debug\Randomizer.csproj.AssemblyReference.cache
+C:\Users\Plna228\Desktop\my own projects\Randomizer\Randomizer\obj\Debug\MainWindow.g.cs
+C:\Users\Plna228\Desktop\my own projects\Randomizer\Randomizer\obj\Debug\App.g.cs
+C:\Users\Plna228\Desktop\my own projects\Randomizer\Randomizer\obj\Debug\Randomizer_MarkupCompile.cache
+C:\Users\Plna228\Desktop\my own projects\Randomizer\Randomizer\obj\Debug\Randomizer_MarkupCompile.lref
+C:\Users\Plna228\Desktop\my own projects\Randomizer\Randomizer\obj\Debug\MainWindow.baml
+C:\Users\Plna228\Desktop\my own projects\Randomizer\Randomizer\obj\Debug\Randomizer.g.resources
+C:\Users\Plna228\Desktop\my own projects\Randomizer\Randomizer\obj\Debug\Randomizer.Properties.Resources.resources
+C:\Users\Plna228\Desktop\my own projects\Randomizer\Randomizer\obj\Debug\Randomizer.csproj.GenerateResource.cache
+C:\Users\Plna228\Desktop\my own projects\Randomizer\Randomizer\obj\Debug\Randomizer.csproj.CoreCompileInputs.cache
+C:\Users\Plna228\Desktop\my own projects\Randomizer\Randomizer\obj\Debug\Randomizer.exe
+C:\Users\Plna228\Desktop\my own projects\Randomizer\Randomizer\obj\Debug\Randomizer.pdb
